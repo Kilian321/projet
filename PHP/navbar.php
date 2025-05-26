@@ -8,9 +8,15 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="navbar.php">Archéo-IT</a>
+            <div class="center-img gap" id="home">
+                <img  class="img" src="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
+                <div class="navbar-brand">
+                    Archéo-IT
+                </div>
+            </div>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -18,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="ourDiscoveries.php">Nos Découvertes</a>
+                        <a class="nav-link ml" href="ourDiscoveries.php">Nos Découvertes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Contact</a>
@@ -38,5 +44,12 @@
     </nav>
 
 </header>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script
-    </body>
+<script>
+    document.getElementById("home").addEventListener('click',function (){
+        window.location='home.php'
+
+    })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script
+
+</body>
