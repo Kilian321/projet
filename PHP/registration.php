@@ -27,7 +27,7 @@
             <form method="post">
                 <h4> Email : </h4>  <br>
                 <input class="input_size" type="email" name="email" ><br>
-                <h4> Mot de passe :</h4> <br>
+                <h4> Mot de passe :</h4><br
                 <input class="input_size" type="password" name="mot_de_passe"><br>
                 <h4>Confirmation du mot de passe : </h4><br>
 

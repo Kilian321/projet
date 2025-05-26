@@ -7,6 +7,7 @@
     position: relative;
     color: #5a4b3c;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .nav-link:hover {
@@ -29,9 +30,13 @@
     opacity: 1;
 }
 
-.btn-outline-primary {
+.btn-outline-primary, .btn-primary {
     border-radius: 20px;
     transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.btn-outline-primary {
     border-color: #5a4b3c;
     color: #5a4b3c;
 }
@@ -43,8 +48,6 @@
 }
 
 .btn-primary {
-    border-radius: 20px;
-    transition: all 0.3s ease;
     background-color: rgba(252, 245, 231, 0.8);
     border-color: #5a4b3c;
     color: #5a4b3c;
@@ -55,6 +58,27 @@
     border-color: #d4b89b;
     color: white;
 }
-.btn-outline-primary{
-    background-color: rgba(252, 245, 231, 0.8);
+@media (max-width: 991px) {
+    .navbar {
+        padding: 15px;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0%;
+        height: 2px;
+        background-color: #9f634b;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .btn-outline-primary, .btn-primary {
+        padding: 10px;
+        font-size: 20px;
+    }
 }
