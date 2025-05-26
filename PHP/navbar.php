@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
             <div class="center-img gap" id="home">
-                <img  class="img" src="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
+                <img class="img" src="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
                 <div class="navbar-brand">
                     Archéo-IT
                 </div>
@@ -33,11 +33,14 @@
                 <!-- Boutons alignés à droite -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary mx-2" href="registration.php">Inscription</a>
+                        <div class="logOUTPictureDiv"><a class="btn-outline-primary mx-2 gap" href="registration.php">Inscription
+                                <img class="logOUTPicture img2" src="../PICTURE/log-in.png"></a>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary" href="connexion.php">Connexion</a>
+                 <li class="nav-item">
+                        <a class="btn-primary" href="connexion.php">Connexion</a>
                     </li>
+
                 </ul>
             </div>
         </div>
