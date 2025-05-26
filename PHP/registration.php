@@ -25,20 +25,28 @@
     <div class="border center ">
         <div class="margin">
             <form method="post">
-                <h4> Email : </h4>  <br>
-                <input class="input_size" type="email" name="email" ><br>
-                <h4> Mot de passe :</h4> <br>
-                <input class="input_size" type="password" name="mot_de_passe"><br>
-                <h4>Confirmation du mot de passe : </h4><br>
+                <div class="margin-bottom">
+                    <h4> Email : </h4>  <br>
+                    <input class="input_size" type="email" name="email" required ><br>
+                </div>
 
-                <input class="input_size" type="password" name="mot_de_passe_confirmation"><br>
+                <div class="margin-bottom">
+                    <h4> Mot de passe :</h4> <br>
+                    <input class="input_size" type="password" name="mot_de_passe" required><br>
+                </div>
+                <div class="">
+                    <h4>Confirmation du mot de passe : </h4><br>
+                    <input class="input_size" type="password" name="mot_de_passe_confirmation" required><br>
+                </div>
+
                 <button class="button_size police" type="submit">I n s c r i p t i o n</button>
             </form>
 
-            <div class="line"></div>
+            <div class="line margin-bottom"></div>
 
             <div class="center">
-                <h4>Tu as déjà un compte ?</h4>
+                <h4>Tu as déjà un compte ? <a href="connexion.php">Connexion</a> </h4>
+
             </div>
         </div>
     </div>
