@@ -28,10 +28,10 @@
                 <!-- Boutons alignés à droite -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary mx-2" href="user-accounts/registration.php">Inscription</a>
+                        <a class="btn btn-outline-primary mx-2" href="registration.php">Inscription</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="user-accounts/connexion.php">Connexion</a>
+                        <a class="btn btn-primary" href="connexion.php">Connexion</a>
                     </li>
                 </ul>
             </div>
