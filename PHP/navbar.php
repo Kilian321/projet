@@ -33,9 +33,7 @@
                 <!-- Boutons alignés à droite -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <div class="logOUTPictureDiv"><a class="btn-outline-primary mx-2 gap" href="registration.php">Inscription
-                                <img class="logOUTPicture img2" src="../PICTURE/log-in.png"></a>
-                        </div>
+                        <a class="btn-outline-primary mx-2 gap" href="registration.php">Inscription</a>
                     </li>
                  <li class="nav-item">
                         <a class="btn-primary" href="connexion.php">Connexion</a>
