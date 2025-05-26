@@ -1,4 +1,4 @@
-<?php require_once "../navbar.php"; ?>
+<?php require_once "navbar.php"; ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,19 +7,18 @@
     <meta charset="UTF-8">
     <title>Inscription</title>
     <!--Five icon-->
-    <link rel="icon" href="../../PICTURE/Archeo-IT_Logo-removebg-preview.png">
+    <link rel="icon" href="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
     <!--Style-->
-    <link rel="stylesheet" href="../../CSS/style-user-accounts/style.scss">
+    <link rel="stylesheet" href="../CSS/style-user-accounts/style.scss">
 
 
 
 </head>
 <body class="bg_body default_body">
 <!--base de données-->
-<?php require_once '../../DATA-BASE/database.php';?>
+<?php require_once '../DATA-BASE/database.php';?>
 
 
-<?php require_once '../home.php';?>
 
 <!--Formulaire d'inscription-->
 <div class="center margin_top margin">
@@ -104,7 +103,7 @@ if ($mot_de_passe_2 === $confirmation){
 <!--Code JS-->
 <script>
     document.getElementById("connexion").addEventListener('click',function (){
-        window.location='../navbar.php'
+        window.location='navbar.php'
     })
 </script>
 
@@ -114,7 +113,7 @@ if ($mot_de_passe_2 === $confirmation){
     feather.replace();
 </script>
 <!--Importation fihier.js-->
-<script src="../../JS/fichier.js"></script>
+<script src="../JS/fichier.js"></script>
 
 
 
