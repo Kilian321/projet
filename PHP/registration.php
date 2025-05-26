@@ -1,4 +1,60 @@
-<?php require_once "navbar.php"; ?>
+<?php
+session_start();
+require_once('../DATA-BASE/database.php');
+require_once("navbar.php");
+
+
+?>
+
+
+<?php
+
+/* ??0 (initialisé à 0, pour éviter des erreurs PHP) */
+$mot_de_passe_2 = $_POST['mot_de_passe'] ??0;
+$confirmation = $_POST['mot_de_passe_confirmation'] ??0;
+
+/* Si le mdp et confirmation sont égaux*/
+if ($mot_de_passe_2 === $confirmation){
+    /* ajout des informations dans la base de données s'il n'y a pas de comptes avec la même email*/
+    if(!empty($_POST['email']) && !empty($_POST['mot_de_passe'])){
+        if (isset($_POST['email']) && isset($_POST['mot_de_passe'])) {
+            $email = htmlspecialchars($_POST['email']);
+            $mot_de_passe = password_hash(htmlspecialchars($_POST['mot_de_passe']), PASSWORD_DEFAULT);
+            $sqlCheckEmail = 'SELECT id FROM user WHERE email = :email';
+            $stmtCheckEmail = $pdo->prepare($sqlCheckEmail);
+            $stmtCheckEmail->execute([':email' => $email]);
+            $checkEmail = $stmtCheckEmail->fetch();
+            if(empty($checkEmail)){
+                $sql = "INSERT INTO user (email, mot_de_passe) VALUES (:email, :mot_de_passe)";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute(array(':email' => $email, ':mot_de_passe' => $mot_de_passe));
+                $sqlGetUser = 'SELECT * FROM user WHERE email = :email';
+                $stmtGetUser = $pdo->prepare($sqlGetUser);
+                $stmtGetUser->execute([':email' => $email]);
+                $getUser = $stmtGetUser->fetch();
+                $_SESSION['user'] = $getUser;
+                header("Location:./connexion.php");
+
+                /* Message si l'email est déjà existant*/
+            } else {
+                $tata= '<div class="center"> 
+                          <div class="box_error center text_color-error">
+                            <img  class="img" src="../PICTURE/error.png">
+                             Email déjà existant
+                          </div> 
+                      </div> ';
+            }
+        }
+    }
+/* Message si le mdp et confirmation ne sont pas les mêmes*/
+}else{
+    if ($mot_de_passe_2 !== $confirmation){
+        echo "Votre mot de passe est incorrect";
+    }
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,8 +69,7 @@
 
 </head>
 <body class="bg_body default_body">
-<!--base de données-->
-<?php require_once '../DATA-BASE/database.php';?>
+
 
 <!--Formulaire d'inscription-->
 <div class="center margin_top margin">
@@ -45,50 +100,8 @@
 </div>
 
 <?php
-
-/* ??0 (initialisé à 0, pour éviter des erreurs PHP) */
-$mot_de_passe_2 = $_POST['mot_de_passe'] ??0;
-$confirmation = $_POST['mot_de_passe_confirmation'] ??0;
-
-/* Si le mdp et confirmation sont égaux*/
-if ($mot_de_passe_2 === $confirmation){
-    /* ajout des informations dans la base de données s'il n'y a pas de comptes avec la même email*/
-    if(!empty($_POST['email']) && !empty($_POST['mot_de_passe'])){
-        if (isset($_POST['email']) && isset($_POST['mot_de_passe'])) {
-            $email = htmlspecialchars($_POST['email']);
-            $mot_de_passe = password_hash(htmlspecialchars($_POST['mot_de_passe']), PASSWORD_DEFAULT);
-            $sqlCheckEmail = 'SELECT id FROM user WHERE email = :email';
-            $stmtCheckEmail = $pdo->prepare($sqlCheckEmail);
-            $stmtCheckEmail->execute([':email' => $email]);
-            $checkEmail = $stmtCheckEmail->fetch();
-            if(empty($checkEmail)){
-                $sql = "INSERT INTO user (email, mot_de_passe) VALUES (:email, :mot_de_passe)";
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute(array(':email' => $email, ':mot_de_passe' => $mot_de_passe));
-                $sqlGetUser = 'SELECT * FROM user WHERE email = :email';
-                $stmtGetUser = $pdo->prepare($sqlGetUser);
-                $stmtGetUser->execute([':email' => $email]);
-                $getUser = $stmtGetUser->fetch();
-                session_start();
-                $_SESSION['user'] = $getUser;
-                header("Location: connexion.php");
-
-                /* Message si l'email est déjà existant*/
-            } else {
-                echo 'email déjà existant';
-            }
-        }
-    }
-/* Message si le mdp et confirmation ne sont pas les mêmes*/
-}else{
-    if ($mot_de_passe_2 !== $confirmation){
-        echo "Votre mot de passe est incorrect";
-    }
-
-}
-
+$tata
 ?>
-
 <!--Code JS-->
 <script>
     document.getElementById("connexion").addEventListener('click',function (){
