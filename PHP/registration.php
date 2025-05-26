@@ -44,13 +44,7 @@
     </div>
 </div>
 
-<label>
-    <div class="password-icon">
-        <input type="password" placeholder="Mot de passe">
-        <i data-feather="eye"></i>
-        <i data-feather="eye-off"></i>
-    </div>
-</label>
+
 
 
 
@@ -99,7 +93,7 @@ if ($mot_de_passe_2 === $confirmation){
 }
 
 ?>
-<a href="Authentification.php"></a>
+
 <!--Code JS-->
 <script>
     document.getElementById("connexion").addEventListener('click',function (){
@@ -107,13 +101,6 @@ if ($mot_de_passe_2 === $confirmation){
     })
 </script>
 
-<!-- ICON SCRIPT -->
-<script src="https://unpkg.com/feather-icons"></script>
-<script>
-    feather.replace();
-</script>
-<!--Importation fihier.js-->
-<script src="../JS/fichier.js"></script>
 
 
 
