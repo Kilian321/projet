@@ -46,6 +46,18 @@ h4{
   background-color: #d8bfae;
 
 }
+.box_error{
+  background-color: #f2bab9;
+  width: 400px;
+  height: 50px;
+  border: 2px solid #ae5759;
+  border-radius: 10px;
+}
+.text_color-error{
+  color: #ae5759;
+  font-weight: bold;
+}
+
 .default_body{
   height: 100vh;
   max-height: 100%;
@@ -74,6 +86,11 @@ h4{
   justify-content: center;
   display: flex;
 }
+.center-2{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
 .line{
   margin-top: 20px;
   height: 2px;
@@ -81,7 +98,7 @@ h4{
   background-color: #724d3d;
 }
 .margin_top{
-  margin-top: 150px;
+  margin-top: 100px;
 }
 .margin-bottom{
   margin-bottom: 18px;
