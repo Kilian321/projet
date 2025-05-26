@@ -11,14 +11,10 @@
     <!--Style-->
     <link rel="stylesheet" href="../CSS/style-user-accounts/style.scss">
 
-
-
 </head>
 <body class="bg_body default_body">
 <!--base de données-->
 <?php require_once '../DATA-BASE/database.php';?>
-
-
 
 <!--Formulaire d'inscription-->
 <div class="center margin_top margin">
@@ -29,7 +25,6 @@
                     <h4> Email : </h4>  <br>
                     <input class="input_size" type="email" name="email" required ><br>
                 </div>
-
                 <div class="margin-bottom">
                     <h4> Mot de passe :</h4> <br>
                     <input class="input_size" type="password" name="mot_de_passe" required><br>
@@ -38,31 +33,21 @@
                     <h4>Confirmation du mot de passe : </h4><br>
                     <input class="input_size" type="password" name="mot_de_passe_confirmation" required><br>
                 </div>
-
                 <button class="button_size police" type="submit">I n s c r i p t i o n</button>
             </form>
-
             <div class="line margin-bottom"></div>
-
             <div class="center">
                 <h4>Tu as déjà un compte ? <a href="connexion.php">Connexion</a> </h4>
-
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
 
 <?php
 
 /* ??0 (initialisé à 0, pour éviter des erreurs PHP) */
 $mot_de_passe_2 = $_POST['mot_de_passe'] ??0;
 $confirmation = $_POST['mot_de_passe_confirmation'] ??0;
-
 
 /* Si le mdp et confirmation sont égaux*/
 if ($mot_de_passe_2 === $confirmation){
@@ -85,19 +70,20 @@ if ($mot_de_passe_2 === $confirmation){
                 $getUser = $stmtGetUser->fetch();
                 session_start();
                 $_SESSION['user'] = $getUser;
-                header("Location: ../home.php");
+                header("Location: connexion.php");
 
                 /* Message si l'email est déjà existant*/
             } else {
                 echo 'email déjà existant';
             }
         }
-    }else{
-        echo "Vous n'avez pas rempli les champs";
     }
-    /* Message si le mdp et confirmation ne sont pas les mêmes*/
+/* Message si le mdp et confirmation ne sont pas les mêmes*/
 }else{
-    echo "Votre mot de passe est incorrect";
+    if ($mot_de_passe_2 !== $confirmation){
+        echo "Votre mot de passe est incorrect";
+    }
+
 }
 
 ?>
