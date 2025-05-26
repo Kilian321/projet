@@ -1,3 +1,5 @@
+<?php require_once "../navbar.php"; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -102,7 +104,7 @@ if ($mot_de_passe_2 === $confirmation){
 <!--Code JS-->
 <script>
     document.getElementById("connexion").addEventListener('click',function (){
-        window.location='../home.php'
+        window.location='../navbar.php'
     })
 </script>
 
