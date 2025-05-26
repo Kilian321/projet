@@ -3,9 +3,13 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Formulaire d'inscription</title>
+    <title>Inscription</title>
     <!--Five icon-->
     <link rel="icon" href="../../PICTURE/Archeo-IT_Logo-removebg-preview.png">
+    <!--Style-->
+    <link rel="stylesheet" href="../../CSS/style-user-accounts/style.scss">
+
+
 
 </head>
 <body class="bg_body default_body">
@@ -13,9 +17,7 @@
 <?php require_once '../../DATA-BASE/database.php';?>
 
 
-<div class="box">
-    GeekQuiz Inscription :
-</div>
+<?php require_once '../home.php';?>
 
 <!--Formulaire d'inscription-->
 <div class="center margin_top margin">
@@ -25,10 +27,10 @@
                 <h4> Email : </h4>  <br>
                 <input class="input_size" type="email" name="email" ><br>
                 <h4> Mot de passe :</h4> <br>
-                <input class="input_size" type="text" name="mot_de_passe"><br>
+                <input class="input_size" type="password" name="mot_de_passe"><br>
                 <h4>Confirmation du mot de passe : </h4><br>
 
-                <input class="input_size" type="text" name="mot_de_passe_confirmation"><br>
+                <input class="input_size" type="password" name="mot_de_passe_confirmation"><br>
                 <button class="button_size police" type="submit">I n s c r i p t i o n</button>
             </form>
 
@@ -37,18 +39,17 @@
             <div class="center">
                 <h4>Tu as déjà un compte ?</h4>
             </div>
-            <div  class="center">
-                <button  id="connexion" class="button_size_2 police" type="submit" >  <a class="no_text_decoration"  target="_self"  >C o n n e x i o n</button>
-            </div>
-
-
-
         </div>
-
     </div>
-
 </div>
 
+<label>
+    <div class="password-icon">
+        <input type="password" placeholder="Mot de passe">
+        <i data-feather="eye"></i>
+        <i data-feather="eye-off"></i>
+    </div>
+</label>
 
 
 
@@ -105,6 +106,13 @@ if ($mot_de_passe_2 === $confirmation){
     })
 </script>
 
+<!-- ICON SCRIPT -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace();
+</script>
+<!--Importation fihier.js-->
+<script src="../../JS/fichier.js"></script>
 
 
 
