@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once('../DATA-BASE/database.php');
 require_once("navbar.php");
+require_once('../DATA-BASE/database.php');
+
 
 
 ?>
@@ -37,8 +38,8 @@ if ($mot_de_passe_2 === $confirmation){
 
                 /* Message si l'email est déjà existant*/
             } else {
-                $tata= '<div class="center"> 
-                          <div class="box_error center text_color-error">
+               echo '<div class="  center margin_top-2"> 
+                          <div class="box_error center text_color-error animation">
                             <img  class="img" src="../PICTURE/error.png">
                              Email déjà existant
                           </div> 
@@ -49,27 +50,29 @@ if ($mot_de_passe_2 === $confirmation){
 /* Message si le mdp et confirmation ne sont pas les mêmes*/
 }else{
     if ($mot_de_passe_2 !== $confirmation){
-        echo "Votre mot de passe est incorrect";
+        echo '<div class="  center margin_top-2"> 
+                          <div class="box_error center text_color-error animation">
+                            <img  class="img" src="../PICTURE/error.png">
+                            Votre mot de passe est incorrect
+                          </div> 
+                      </div> ';
     }
 
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 
     <meta charset="UTF-8">
     <title>Inscription</title>
-    <!--Five icon-->
-    <link rel="icon" href="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
+
     <!--Style-->
     <link rel="stylesheet" href="../CSS/style-user-accounts/style.scss">
 
 </head>
 <body class="bg_body default_body">
-
 
 <!--Formulaire d'inscription-->
 <div class="center margin_top margin">
@@ -99,9 +102,7 @@ if ($mot_de_passe_2 === $confirmation){
     </div>
 </div>
 
-<?php
-$tata
-?>
+
 <!--Code JS-->
 <script>
     document.getElementById("connexion").addEventListener('click',function (){

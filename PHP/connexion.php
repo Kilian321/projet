@@ -16,35 +16,6 @@
 </head>
 <body class="bg_body default_body">
 <?php require_once '../DATA-BASE/database.php'; global $pdo; ?>
-<?php if(!empty($_SESSION['user'])): ?>
-    <h2>Bonjour <?= $_SESSION['user']['email']; ?></h2>
-<?php endif; ?>
-
-<!--Le formulaire -->
-<div class="center margin_top margin">
-    <div class="border center ">
-        <div class="margin">
-            <form method="post">
-                <div class="margin-bottom">
-                    <h4>Email :</h4><br>
-                    <input  class="input_size"  type="email" name="email" required ><br>
-                </div>
-                <div>
-                    <h4>Mot de passe :</h4> <br>
-                    <input class="input_size" type="text" name="mot_de_passe" required><br>
-                </div>
-                <button class="button_size police" type="submit">C o n n e x i o n</button>
-            </form>
-
-            <div class="line margin-bottom"></div>
-
-            <div class="center">
-                <h4>Tu n'as pas de  compte ? <a href="registration.php">Inscription</a></h4>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <!--Vérifie dans la base de données-->
 <?php
@@ -60,22 +31,52 @@ if(!empty($_POST['email']) && !empty($_POST['mot_de_passe'])){
                 $_SESSION['user'] = $user;
                 header('Location: ./home.php');
             } else {
-
-                    echo "mot de passe incorrecte";
-
-
+                echo '<div class="  center margin_top-2"> 
+                          <div class="box_error center text_color-error animation">
+                            <img  class="img" src="../PICTURE/error.png">
+                            Votre mot de passe est incorrect
+                          </div> 
+                      </div> ';
             }
         } else {
-
-                echo 'Email inexistante';
-
-
-
+            echo '<div class="  center margin_top-2"> 
+                          <div class="box_error center text_color-error animation">
+                            <img  class="img" src="../PICTURE/error.png">
+                            Email inexistant ou incorrect
+                          </div> 
+                      </div> ';
         }
     }
 }
 
 ?>
+<!--Le formulaire -->
+<div class="center margin_top margin">
+    <div class="border center ">
+        <div class="margin">
+            <form method="post">
+                <div class="margin-bottom">
+                    <h4>Email :</h4><br>
+                    <input  class="input_size"  type="email" name="email" required ><br>
+                </div>
+                <div>
+                    <h4>Mot de passe :</h4> <br>
+                    <input class="input_size" type="password" name="mot_de_passe" required><br>
+                </div>
+                <button class="button_size police" type="submit">C o n n e x i o n</button>
+            </form>
+
+            <div class="line margin-bottom"></div>
+
+            <div class="center">
+                <h4>Tu n'as pas de  compte ? <a href="registration.php">Inscription</a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
 
