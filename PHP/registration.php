@@ -21,15 +21,6 @@
     <div class="border center ">
         <div class="margin">
             <form method="post">
-<<<<<<< HEAD
-                <h4> Email : </h4>  <br>
-                <input class="input_size" type="email" name="email" ><br>
-                <h4> Mot de passe :</h4><br
-                <input class="input_size" type="password" name="mot_de_passe"><br>
-                <h4>Confirmation du mot de passe : </h4><br>
-
-                <input class="input_size" type="password" name="mot_de_passe_confirmation"><br>
-=======
                 <div class="margin-bottom">
                     <h4> Email : </h4>  <br>
                     <input class="input_size" type="email" name="email" required ><br>
@@ -42,7 +33,7 @@
                     <h4>Confirmation du mot de passe : </h4><br>
                     <input class="input_size" type="password" name="mot_de_passe_confirmation" required><br>
                 </div>
->>>>>>> 317f821626b7cb4cfb3884c720ec8003ed2a86fb
+
                 <button class="button_size police" type="submit">I n s c r i p t i o n</button>
             </form>
             <div class="line margin-bottom"></div>
