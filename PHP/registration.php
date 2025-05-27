@@ -64,18 +64,15 @@ if ($mot_de_passe_2 === $confirmation){
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
     <meta charset="UTF-8">
     <title>Inscription</title>
-
     <!--Style-->
     <link rel="stylesheet" href="../CSS/style-user-accounts/style.scss">
-
 </head>
 <body class="bg_body default_body">
 
 <!--Formulaire d'inscription-->
-<div class="center margin_top margin">
+<div class="center margin_top margin ">
     <div class="border center ">
         <div class="margin">
             <form method="post">
@@ -91,7 +88,6 @@ if ($mot_de_passe_2 === $confirmation){
                     <h4>Confirmation du mot de passe : </h4><br>
                     <input class="input_size" type="password" name="mot_de_passe_confirmation" required><br>
                 </div>
-
                 <button class="button_size police" type="submit">I n s c r i p t i o n</button>
             </form>
             <div class="line margin-bottom"></div>
