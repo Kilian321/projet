@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
             <div class="center-img gap" id="home">
-                <img class="img" src="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
+                    <img class="img" src="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
                 <div class="navbar-brand">
                     Archéo-IT
                 </div>
@@ -34,7 +34,7 @@
                 <ul class="navbar-nav ms-auto gap">
                     <?php if(!empty($_SESSION['user']['admin'])): ?>
                     <li class="nav-item ">
-                        <a class="btn-outline-primary  mx-2 gap" href="registration.php">Création</a>
+                        <a class="btn-outline-primary  mx-2 gap" href="create_page.php">Création</a>
                     </li>
                     <?php endif; ?>
                     <?php if(empty($_SESSION['user'])): ?>
@@ -49,7 +49,7 @@
                     <li class="nav-item " id="disconnect">
                         <a  class="btn-primary ">Déconnexion</a>
                     </li>
-                    <?php session_destroy();?>
+
                     <?php endif; ?>
 
                 </ul>
@@ -64,7 +64,7 @@
 
     })
     document.getElementById("disconnect").addEventListener('click',function (){
-        window.location='home.php'
+        window.location='logout.php'
 
     })
 </script>
