@@ -2,17 +2,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-
-
     <meta charset="UTF-8">
     <title>Connexion</title>
     <!--Style-->
     <link rel="stylesheet" href="../CSS/style-user-accounts/style.scss">
     <!--Five icon-->
     <link rel="icon" href="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
-
-
-
 </head>
 <body class="bg_body default_body">
 <?php require_once '../DATA-BASE/database.php'; global $pdo; ?>
@@ -65,21 +60,13 @@ if(!empty($_POST['email']) && !empty($_POST['mot_de_passe'])){
                 </div>
                 <button class="button_size police" type="submit">C o n n e x i o n</button>
             </form>
-
             <div class="line margin-bottom"></div>
-
             <div class="center">
                 <h4>Tu n'as pas de  compte ? <a href="registration.php">Inscription</a></h4>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
 <!--Code JS-->
 <script>
     document.getElementById("inscription").addEventListener('click',function (){
