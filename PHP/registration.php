@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once("navbar.php");
 require_once('../DATA-BASE/database.php');
 
@@ -33,6 +33,7 @@ if ($mot_de_passe_2 === $confirmation){
                 $stmtGetUser = $pdo->prepare($sqlGetUser);
                 $stmtGetUser->execute([':email' => $email]);
                 $getUser = $stmtGetUser->fetch();
+                session_start();
                 $_SESSION['user'] = $getUser;
                 header("Location:./connexion.php");
 

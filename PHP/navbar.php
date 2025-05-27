@@ -31,13 +31,26 @@
                     </li>
                 </ul>
                 <!-- Boutons alignés à droite -->
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto gap">
+                    <?php if(!empty($_SESSION['user']['admin'])): ?>
+                    <li class="nav-item ">
+                        <a class="btn-outline-primary  mx-2 gap" href="registration.php">Création</a>
+                    </li>
+                    <?php endif; ?>
+                    <?php if(empty($_SESSION['user'])): ?>
                     <li class="nav-item">
                         <a class="btn-outline-primary mx-2 gap" href="registration.php">Inscription</a>
                     </li>
-                 <li class="nav-item">
+                     <li class="nav-item">
                         <a class="btn-primary" href="connexion.php">Connexion</a>
                     </li>
+                    <?php endif; ?>
+                    <?php if(!empty($_SESSION['user'])): ?>
+                    <li class="nav-item " id="disconnect">
+                        <a  class="btn-primary ">Déconnexion</a>
+                    </li>
+                    <?php session_destroy();?>
+                    <?php endif; ?>
 
                 </ul>
             </div>
@@ -47,6 +60,10 @@
 </header>
 <script>
     document.getElementById("home").addEventListener('click',function (){
+        window.location='home.php'
+
+    })
+    document.getElementById("disconnect").addEventListener('click',function (){
         window.location='home.php'
 
     })
