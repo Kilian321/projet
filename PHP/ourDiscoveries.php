@@ -1,4 +1,6 @@
-<?php require_once "navbar.php"; ?>
+<?php
+session_start();
+require_once "navbar.php"; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
