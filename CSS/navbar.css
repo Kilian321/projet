@@ -45,9 +45,6 @@
     border-color: #d4b89b;
 }
 
-<<<<<<< HEAD
-
-=======
 .img{
     height: 40px;
     width: 40px;
@@ -66,7 +63,6 @@
 .ml{
     margin-left: 10px;
 }
->>>>>>> 0b6bcb54fead00065ed071c5c9bd79c9db7ad2dc
 
 @media (max-width: 991px) {
     .navbar {

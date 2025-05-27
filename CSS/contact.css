@@ -7,7 +7,7 @@ body {
 .informationContact {
     height: 670px;
     width: 600px;
-    margin: 40px 70px;
+    margin: 40px 50px;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -60,13 +60,13 @@ p{
     text-decoration: underline;
 }
 .form-container{
-    height: 670px;
+    height: 450px;
     width: 450px;
-    margin: 40px 70px;
+    margin: 130px 50px;
     background-color: white;
     border-radius: 8px;
     box-shadow: -1px 0 8px -2px;
 }
 .pictureInformation{
-    margin-top: 250px;
+    margin-top: 10px;
 }
