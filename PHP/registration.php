@@ -2,6 +2,7 @@
 
 require_once("navbar.php");
 require_once('../DATA-BASE/database.php');
+header("Access-Control-Allow-Origin: *");
 
 
 
@@ -81,12 +82,18 @@ if ($mot_de_passe_2 === $confirmation){
                     <input class="input_size" type="email" name="email" required ><br>
                 </div>
                 <div class="margin-bottom">
-                    <h4> Mot de passe :</h4> <br>
-                    <input class="input_size" type="password" name="password" required><br>
+                    <h4> Mot de passe :</h4>
+                    <div class="">
+                        <input  id="passwordInput" class="input_size passwordInput" type="password" name="password" required>
+                        <img class="img-2" src="../PICTURE/view.png" id="passwordView" alt="passwordView">
+                    </div>
                 </div>
                 <div class="">
                     <h4>Confirmation du mot de passe : </h4><br>
-                    <input class="input_size" type="password" name="mot_de_passe_confirmation" required><br>
+                    <div class="">
+                        <input class="input_size passwordInput2" type="password" name="mot_de_passe_confirmation" required>
+                        <img class="img-3" src="../PICTURE/view.png" id="passwordHide" alt="passwordHide">
+                    </div>
                 </div>
                 <!-- Bouton génération mot de passe -->
                 <div class="center margin_top-3">
@@ -114,30 +121,28 @@ if ($mot_de_passe_2 === $confirmation){
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Génération de mot de passe</h1>
+                <h1 class="modal-title fs-5 center" id="exampleModalLabel">Génération de mot de passe</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
-            <form method="post" class="center">
+            <div class="center">
                 <div class="margin-bottom">
-                    <div>
-                        <h4> Type de mot de passse: </h4>  <br>
-                        <select class="passModeSel">
-                            <option onclick=console.log("ouiiiii") class="passMode" id="Alpha">Alphabétique</option>
-                            <option class="passMode" id="AlphaNum">Alphanumérique</option>
-                            <option class="passMode" id="Complet">Complet</option>
+                    <div class="center gap margin-bottom">
+                        <h5> Type de mot de passse : </h5>
+                        <select class="passModeSel input_size_password">
+                            <div class="center">
+                                <option class="passMode" id="Alpha">Alphabétique</option>
+                                <option class="passMode" id="AlphaNum">Alphanumérique</option>
+                                <option class="passMode" id="Complet">Complet</option>
+                            </div>
                         </select>
                     </div>
-                    <div>
-                        <h4> Taille du mot de passe: </h4>
-                        <input class="password-size" type="number" name="" required>
+                    <div class="gap display-flex">
+                        <h5> Taille du mot de passe : </h5>
+                        <input class="password-size input_size_password" type="number" name="" required>
                     </div>
-                    <button class="button_size police" type="submit">Envoyer</button>
+                    <button id="passwordSettingsBtn" class="button_size police" data-bs-dismiss="modal" type="">Envoyer</button>
                 </div>
-            </form>
-
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -150,6 +155,7 @@ if ($mot_de_passe_2 === $confirmation){
     })
 </script>
 <script src="../JS/fichier.js"></script>
+<script src="../JS/passwordView.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script
 </body>
 </html>

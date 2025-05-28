@@ -5,6 +5,13 @@ h4{
   font-family: "Jersey 10", serif;
   color:#724d3d;
 }
+h5{
+  display:inline;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Jersey 10", serif;
+  color:black;
+}
 .police{
   font-family: "Jersey 10", serif;
   color: #ffffff;
@@ -24,6 +31,14 @@ h4{
   width: 400px;
   font-size: 20px;
   margin: 0;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+.input_size_password{
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
   border-radius: 5px;
   border: 2px solid gray;
 }
@@ -82,7 +97,9 @@ h4{
   margin: 0;
   padding: 0 ;
 }
-
+.display-flex{
+  display: flex;
+}
 
 .border{
   border: 1px solid white;
@@ -124,6 +141,25 @@ h4{
 .margin-bottom{
   margin-bottom: 18px;
 }
+.img-2{
+  height: 30px;
+  width: 30px;
+  z-index: 10;
+  margin-left: -3rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+.img-3{
+  height: 30px;
+  width: 30px;
+  z-index: 10;
+  margin-left: -3rem;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
 .box{
   background-color: #f2e5d2;
   top: 0;
@@ -153,7 +189,7 @@ h4{
     border-radius: 10px;
     box-shadow: -1px 0px 8px -2px;
     width:550px;
-    height: 450px;
+    height: auto;
     background-color: white;
 
   }
