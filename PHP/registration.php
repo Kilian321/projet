@@ -68,9 +68,6 @@ if ($mot_de_passe_2 === $confirmation){
     <title>Inscription</title>
     <!--Style-->
     <link rel="stylesheet" href="../CSS/style-user-accounts/style.scss">
-    <!--Boostrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
 </head>
 <body class="bg_body default_body">
 
@@ -141,7 +138,6 @@ if ($mot_de_passe_2 === $confirmation){
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary passwordSettingsBtn">Save changes</button>
             </div>
         </div>
     </div>
