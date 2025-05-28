@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary ">
         <div class="container-fluid">
             <div class="center-img gap" id="home">
-                    <img class="img" src="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
+                    <img alt="logo" class="img" src="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
                 <div class="navbar-brand">
                     Archéo-IT
                 </div>

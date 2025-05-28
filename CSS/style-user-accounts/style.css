@@ -72,7 +72,7 @@ h4 {
 .border {
   border: 1px solid white;
   border-radius: 10px;
-  box-shadow: -1px 0px 8px -2px;
+  box-shadow: -1px 0 8px -2px;
   width: 500px;
   background-color: white;
 }

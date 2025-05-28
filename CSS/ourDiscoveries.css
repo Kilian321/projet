@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #d9bfae;
+}
+
+.slider-container {
+    background-color: #9f634b;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: -1px 0 8px -2px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    min-width: 430px;
+    max-width: 100%;
+    background: #d9bfae;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 10px;
+}
+
+.card img {
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.previousNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 30%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+.title{
+    text-decoration: underline;
+    display:flex;
+    padding: 40px 0 60px;
+    justify-content: center;
+    color: #724d3d;
+}
+
+/* content of blogs */
+.constructionSites-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* blogs */
+.constructionSites-bloc {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* element of blog */
+.constructionSites-item {
+    min-width: 450px;
+    max-width: 300px;
+    flex: 0 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+/* picture */
+.constructionSites-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.constructionSites-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.constructionSites-description{
+    font-size: 25px;
+}
+.constructionSites-date{
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.constructionSites-item p {
+    color: #555;
+}
+
+@media (max-width: 991px) {
+    .constructionSites-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        min-width: 580px;
+    }
+    .card img{
+        height: 400px;
+        width: 550px;
+    }
+    .previousNext{
+        font-size: 50px;
+    }
+}
+

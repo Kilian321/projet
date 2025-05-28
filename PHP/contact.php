@@ -39,7 +39,7 @@ require_once "navbar.php"; ?>
                 }
                 $message = $_POST["message"];
 
-                $sql = "INSERT INTO formulaire (last_name, first_name, email, menu, message) VALUES (:last_name, :first_name, :email, :menu, :message)";
+                $sql = "INSERT INTO forms (last_name, first_name, email, menu, message) VALUES (:last_name, :first_name, :email, :menu, :message)";
                 $stmt = $pdo->prepare($sql);
 
                 // Associer les valeurs et exécuter la requête
@@ -79,10 +79,14 @@ require_once "navbar.php"; ?>
             <textarea id="message" name="message" rows="5" required></textarea>
 
             <div class="buttonSubmit">
-            <button type="submit" name="contactBtn">Envoyer</button>
+            <button class="buttonSubmitBTN" type="submit" name="contactBtn">Envoyer</button>
             </div>
         </form>
     </div>
     </div>
 </header>
+<?php
+require_once "footerPolicy.php";
+?>
 </body>
+</html>
