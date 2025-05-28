@@ -1,40 +1,42 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 import random
-import sys
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+class PasswordRequest(BaseModel):
+    taille: int
+    mode: int
 
 
+@app.post("/api/password")
+def generatePassword(req: PasswordRequest):
 
-def generer_mot_de_passe(type_mot_de_passe, taille):
-
-   #variables
     lettre = "azertyuiopqsdfghjklmwxcvbn" + "AZERTYUIOPQSDFGHJKLMWXCVBN"
     lettreEtNumero = lettre + "1234567890"
     lettreNumeroCaractere = lettreEtNumero + "?&/:!§$%^>+-*"
+    caracteres = "gefrhteggeffezhrst"
 
-   #swicth 
-    match type_mot_de_passe:
-        case '1':
+
+    match req.mode:
+        case 1:
             caracteres = lettre
-        case '2':
+        case 2:
             caracteres = lettreEtNumero
-        case '3':
+        case 3:
             caracteres = lettreNumeroCaractere
         case _:
             print("Type de mot de passe incorrect")
 
-   #variable du mot de passe 
-    mot_de_passe = ''.join(random.choice(caracteres) for _ in range(taille))
-    return mot_de_passe
 
-#demande du type 
-""" type_mot_de_passe = input("Quel type de mot de passe voulez-vous générer ? alphabetique = 1, alphanumerique = 2, tout = 3 : ")
-
-#demande de la longueur
-taille = int(input("Combien de caractères ? : "))
-if taille < 8 :
-    taille=8
-    print("La taille minimum est de 8, donc le mot de passe contiendra 8 caractères") """
-
-
-#génération du mot de passe en fonction des paramètres
-mot_de_passe = generer_mot_de_passe(sys.argv[1], int(sys.argv[2]))
-print(mot_de_passe)
+    password = ''.join(random.choice(caracteres) for _ in range(req.taille))
+    return {"password": password}
