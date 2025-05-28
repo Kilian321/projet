@@ -63,7 +63,7 @@
         window.location='home.php'
 
     })
-    document.getElementById("disconnect").addEventListener('click',function (){
+    document.getElementById("disconnect")?.addEventListener('click',function (){
         window.location='logout.php'
 
     })

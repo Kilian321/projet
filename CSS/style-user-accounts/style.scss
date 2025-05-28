@@ -42,6 +42,21 @@ h4{
   };
 }
 
+.button_size-2{
+  height: 45px;
+  width: 300px;
+  font-weight: bold;
+  color: #724d3d;
+  background-color: #f2e5d2;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 2px solid  #724d3d;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.05);
+  };
+}
+
 .bg_body{
   background-color: #d8bfae;
 
@@ -102,6 +117,9 @@ h4{
 }
 .margin_top-2{
   margin-top: 50px;
+}
+.margin_top-3{
+  margin-top: 10px;
 }
 .margin-bottom{
   margin-bottom: 18px;
