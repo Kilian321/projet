@@ -39,7 +39,7 @@ if ($mot_de_passe_2 === $confirmation){
             } else {
                echo '<div class="  center margin_top-2"> 
                           <div class="box_error center text_color-error animation">
-                            <img  class="img" src="../PICTURE/error.png">
+                            <img alt="error" class="img" src="../PICTURE/error.png">
                              Email déjà existant
                           </div> 
                       </div> ';
@@ -51,7 +51,7 @@ if ($mot_de_passe_2 === $confirmation){
     if ($mot_de_passe_2 !== $confirmation){
         echo '<div class="  center margin_top-2"> 
                           <div class="box_error center text_color-error animation">
-                            <img  class="img" src="../PICTURE/error.png">
+                            <img alt="error" class="img" src="../PICTURE/error.png">
                             Votre mot de passe est incorrect
                           </div> 
                       </div> ';
