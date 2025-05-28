@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 <?php require_once "navbar.php"; ?>
 
-=======
+
 <?php
 session_start();
 require_once "navbar.php"; ?>
->>>>>>> e343e7762085a65852b5e1e91ccc50992afbdc66
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

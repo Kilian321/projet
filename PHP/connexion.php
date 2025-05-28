@@ -14,14 +14,14 @@
 
 <!--Vérifie dans la base de données-->
 <?php
-if(!empty($_POST['email']) && !empty($_POST['mot_de_passe'])){
-    if (isset($_POST['email']) && isset($_POST['mot_de_passe'])) {
+if(!empty($_POST['email']) && !empty($_POST['password'])){
+    if (isset($_POST['email']) && isset($_POST['password'])) {
         $email_in_base= "SELECT * FROM user WHERE email = :email";
         $stmt = $pdo->prepare($email_in_base);
         $stmt->execute(array(':email' => $_POST['email']));
         $user = $stmt->fetch();
         if(!empty($user)) {
-            if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe'])) {
+            if(password_verify($_POST['password'], $user['password'])) {
                 session_start();
                 $_SESSION['user'] = $user;
                 header('Location: ./home.php');
@@ -56,7 +56,7 @@ if(!empty($_POST['email']) && !empty($_POST['mot_de_passe'])){
                 </div>
                 <div>
                     <h4>Mot de passe :</h4> <br>
-                    <input class="input_size" type="password" name="mot_de_passe" required><br>
+                    <input class="input_size" type="password" name="password" required><br>
                 </div>
                 <button class="button_size police" type="submit">C o n n e x i o n</button>
             </form>
