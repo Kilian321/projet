@@ -8,4 +8,7 @@ require_once "navbar.php"; ?>
     <meta charset="UTF-8">
     <link rel="icon" href="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
 </head>
+<header>
+
+</header>
 </html>

@@ -5,7 +5,7 @@ body {
     height: 70vh;
 }
 .informationContact {
-    height: 670px;
+    height: auto;
     width: 600px;
     margin: 40px 50px;
     background-color: white;
@@ -42,6 +42,10 @@ button:hover {
 label{
     padding-top: 12px;
 }
+select{
+    margin-top: 5px;
+    display: flex;
+}
 .contactPage{
     display: flex;
     flex-direction: row;
@@ -69,4 +73,49 @@ p{
 }
 .pictureInformation{
     margin-top: 10px;
+}
+h2{
+    text-decoration: underline;
+}
+
+@media (max-width: 991px){
+    .contactPage{
+        justify-content: center;
+        align-items: center;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-container{
+        height: auto;
+        width: 600px;
+    }
+    .informationContact{
+        height: auto;
+        width: 700px;
+    }
+    p{
+        font-size: 25px;
+    }
+    label{
+        font-size: 25px;
+    }
+    input{
+        height: 70px;
+        font-size: 25px;
+    }
+    .buttonSubmit{
+        font-size: 25px;
+    }
+    textarea{
+        font-size: 25px;
+    }
+    select{
+        height: 50px;
+        font-size: 25px;
+    }
+    option{
+        font-size: 10px;
+        height: 40px;
+    }
 }
