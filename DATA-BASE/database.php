@@ -2,7 +2,7 @@
 // connection a la base de donnée des utilisateurs
 $host = 'localhost';
 $username = 'root';
-$password = 'Kilian123';
+$password = 'VnW4z9f6';
 $database = 'archeo-it';
 $charset = 'utf8mb4';
 // Options de connexion PDO

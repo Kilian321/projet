@@ -76,6 +76,35 @@ global $pdo;
         </div>
     </section>
 </main>
+<div>
+    <h1 class="title">Qui sommes nous ?</h1>
+</div>
+<div class="containerWhoWeAre">
+    <div class="content">
+    <div class="block">
+        <h2 class="blockTitle">Qui sommes-nous ?</h2>
+        <p>Nous sommes une entreprise passionné dédié à l'exploration du passé et à la redécouverte des civilisations oubliées.</p>
+        <p>Fondée par une équipe de chercheurs, d'explorateurs et d'amoureux de l'histoire, notre mission est de mettre en lumière les vestiges du temps à travers des fouilles, des études et des restitutions précises.</p>
+    </div>
+    <div class="block">
+        <h2 class="blockTitle">Notre approche</h2>
+        <p>Chez Archéo-IT, nous croyons que chaque fragment de poterie, chaque inscription effacée et chaque ruine enfouie racontent une histoire.<br> Notre travail s'articule autour de méthodes rigoureuses :</p>
+        <p>Fouilles de terrain : Des sites antiques aux cités médiévales, nous menons des explorations en collaboration avec des institutions scientifiques.<br>
+
+            Analyse et datation : Grâce aux technologies modernes comme le carbone 14 et l'imagerie 3D, nous redonnons vie aux artefacts.<br>
+
+            Valorisation du patrimoine : Nous participons à la préservation des découvertes et leur diffusion auprès du grand public.</p>
+    </div>
+    <div class="block">
+        <h2 class="blockTitle">Notre équipe</h2>
+        <p>Notre groupe est composé d'archéologues chevronnés, d'historiens spécialisés, et de passionnés du patrimoine. Ensemble, nous cherchons à percer les mystères du passé et à partager nos découvertes via conférences, expositions et publications.</p>
+    </div>
+    <div class="block">
+        <h2 class="blockTitle">Nous rejoindre</h2>
+        <p>Vous êtes fasciné par les civilisations anciennes et souhaitez contribuer ? Que vous soyez étudiant, chercheur ou amateur éclairé. Archéo-IT est peût-être fait pour vous! Envoyer nous un message <a href="contact.php">ici</a>.</p>
+    </div>
+    </div>
+</div>
     <script src="../JS/home.js"></script>
     <?php
         require_once "footerPolicy.php";
