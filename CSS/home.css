@@ -115,23 +115,20 @@ body {
     color: #555;
 }
 .containerWhoWeAre {
-    background-image: url("../PICTURE/premium_photo-1661962345279-4d1d7a98409a.jpg");
+    background-image: url("../PICTURE/9bf78ccfa06b44a42730e5850835dbb5.jpg");
+    width: 100%;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    border-radius: 10px;
-    border: 5px solid #9f634b;
     padding: 30px 130px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 1000px;
-    margin: auto;
 }
 
 .block {
     background-color: white;
-    opacity: 0.80;
+    opacity: 0.85;
     padding: 20px;
     margin-top: 50px;
     border-radius: 10px;
