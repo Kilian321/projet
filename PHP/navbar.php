@@ -38,6 +38,9 @@
                     <li class="nav-item ">
                         <a class="btn-outline-primary  mx-2 gap" href="create_page.php">Création</a>
                     </li>
+                        <li class="nav-item ">
+                            <a class="btn-outline-primary  mx-2 gap" href="messaging.php">Messagerie</a>
+                        </li>
                     <?php endif; ?>
                     <?php if(empty($_SESSION['user'])): ?>
                     <li class="nav-item">
