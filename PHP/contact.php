@@ -31,12 +31,6 @@ require_once "navbar.php"; ?>
                 $prenom = $_POST["first_name"];
                 $email = $_POST["email"];
                 $menu = $_POST["menu"];
-                $menuStatus = 1;
-                switch ($menu) {
-                    case "Demande d'informations": $menuStatus = 0; break;
-                    case "Demande de rendez-vous": $menuStatus = 1; break;
-                    case "Autre": $menuStatus = 2; break;
-                }
                 $message = $_POST["message"];
 
                 $sql = "INSERT INTO forms (last_name, first_name, email, menu, message) VALUES (:last_name, :first_name, :email, :menu, :message)";
@@ -47,7 +41,7 @@ require_once "navbar.php"; ?>
                     ':last_name' => $nom,
                     ':first_name' => $prenom,
                     ':email' => $email,
-                    ':menu' => $menuStatus,
+                    ':menu' => $menu,
                     ':message' => $message
                 ]);
 
@@ -72,7 +66,7 @@ require_once "navbar.php"; ?>
                 <option value="" disabled selected>-- Sélectionnez une option --</option>
                 <option value="information">Demande d’informations</option>
                 <option value="appointment">Demande de Rendez-vous</option>
-                <option value="Other">Autre</option>
+                <option value="other">Autre</option>
             </select>
 
             <label for="message">Message :</label>

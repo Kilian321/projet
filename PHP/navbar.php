@@ -52,7 +52,7 @@
                     <?php endif; ?>
                     <?php if(!empty($_SESSION['user'])): ?>
                     <li class="nav-item " id="disconnect">
-                        <a  class="btn-primary ">Déconnexion</a>
+                        <a class="btn-primary ">Déconnexion</a>
                     </li>
 
                     <?php endif; ?>

@@ -19,7 +19,7 @@ body {
 }
 
 .card {
-    min-width: 430px;
+    min-width: 480px;
     max-width: 100%;
     background: #d9bfae;
     padding: 15px;
@@ -30,8 +30,8 @@ body {
 }
 
 .card img {
-    height: 300px;
-    width: 400px;
+    height: 350px;
+    width: 450px;
     border-radius: 10px;
 }
 
@@ -65,7 +65,6 @@ body {
 }
 /* content of blogs */
 .blogs-container {
-    width: 80%;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -74,7 +73,9 @@ body {
 /* blogs */
 .blogs-bloc {
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -88,7 +89,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 10px;
     text-align: center;
-    margin: 80px;
+    margin: 50px;
 }
 
 /* picture */
@@ -141,6 +142,24 @@ body {
 p{
     font-size: 20px;
 }
+.moreDetails{
+    margin: 20px;
+}
+
+.moreDetailsText{
+    background-color: #724d3d;
+    border: none;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor:pointer;
+    color : white;
+}
+.moreDetailsText:hover{
+    background-color: rgba(27, 16, 6, 0.8);
+    color: white;
+}
 
 @media (max-width: 991px) {
     .blogs-container {
@@ -154,7 +173,7 @@ p{
     }
     .card img{
         height: 400px;
-        width: 550px;
+        width: 600px;
     }
     .previousNext{
         font-size: 50px;

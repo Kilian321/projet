@@ -7,7 +7,7 @@ global $pdo;
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Archéo-IT Home</title>
+    <title>Archéo-IT Accueil</title>
     <meta charset="UTF-8">
     <link rel="icon" href="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
     <link href="../CSS/home.css" rel="stylesheet">
@@ -65,7 +65,9 @@ global $pdo;
                             <img src="<?= ($row['picture']);  ?>" alt="Film 1">
                             <p class="blogs-date"><?= ($row['date_publication']); ?></p>
                             <p class="blogs-title"><?= ($row['title']); ?></p>
-                            <p class="blogs-description">Description : <?= ($row['description']); ?></p>
+                        <div class="moreDetails">
+                            <a class="moreDetailsText" href="blogsDetails.php">En savoir plus</a>
+                        </div>
                     </div>
 
                 <?php
