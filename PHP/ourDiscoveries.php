@@ -51,7 +51,7 @@ global $pdo;
 </section>
 <main>
     <section class="constructionSites-carousel">
-        <div class="constructionSites-container">
+        <div class="constructionSites-bloc">
             <div class="constructionSites-bloc">
                 <?php
                 $sql = "SELECT * FROM constructionsites"; // votre requete sql
