@@ -34,6 +34,12 @@ require_once "navbar.php";
                 $prenom = $_POST["first_name"];
                 $email = $_POST["email"];
                 $menu = $_POST["menu"];
+                $menuStatus = 1;
+                switch ($menu) {
+                    case "Demande d'informations": $menuStatus = 0; break;
+                    case "Demande de rendez-vous": $menuStatus = 1; break;
+                    case "Autre": $menuStatus = 2; break;
+                }
                 $message = $_POST["message"];
 
                 $sql = "INSERT INTO forms (last_name, first_name, email, menu, message) VALUES (:last_name, :first_name, :email, :menu, :message)";
@@ -44,7 +50,7 @@ require_once "navbar.php";
                     ':last_name' => $nom,
                     ':first_name' => $prenom,
                     ':email' => $email,
-                    ':menu' => $menu,
+                    ':menu' => $menuStatus,
                     ':message' => $message
                 ]);
                 echo "Votre demande a bien été enregistrée.";
