@@ -65,7 +65,7 @@ global $pdo;
 
                     ?>
                     <div class="blogs-item">
-                        <img src="<?= ($row['picture']);  ?>" alt="Film 1">
+                        <img src="../PICTURE/img-blog/<?= $row['picture']?>" alt="<?= $row['title']?>">
                         <p class="blogs-date"><?= (substr($row['date_publication'],0,10)); ?></p>
                         <p class="blogs-title"><?= ($row['title']); ?></p>
                         <div class="moreDetails">
