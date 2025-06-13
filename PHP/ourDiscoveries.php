@@ -59,7 +59,7 @@ global $pdo;
                     ?>
                     <div class="constructionSites-item">
                         <img src="<?= ($row['picture']);  ?>" alt="Film 1">
-                        <p class="constructionSites-date"><?= ($row['date_publication']); ?></p>
+                        <p class="constructionSites-date"><?= (substr($row['date_publication'],0,10)); ?></p>
                         <p class="constructionSites-title"><?= ($row['title']); ?></p>
                         <p class="constructionSites-description"><?= ($row['description']); ?></p>
                     </div>

@@ -1,7 +1,10 @@
-<?php require_once "navbar.php"; ?>
 <?php
 session_start();
-require_once "navbar.php"; ?>
+require_once '../DATA-BASE/database.php';
+require_once "navbar.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,7 +27,7 @@ require_once "navbar.php"; ?>
     </div>
     <div class="informationContact">
         <h2 class="contactUS">Contactez-nous :</h2>
-        <?php require_once '../DATA-BASE/database.php'; global $pdo;
+        <?php global $pdo;
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (isset($_POST["contactBtn"])) {
                 $nom = $_POST["last_name"];
@@ -44,7 +47,6 @@ require_once "navbar.php"; ?>
                     ':menu' => $menu,
                     ':message' => $message
                 ]);
-
                 echo "Votre demande a bien été enregistrée.";
             }
         }
