@@ -66,7 +66,7 @@ global $pdo;
                     ?>
                     <div class="blogs-item">
                         <img src="<?= ($row['picture']);  ?>" alt="Film 1">
-                        <p class="blogs-date"><?= ($row['date_publication']); ?></p>
+                        <p class="blogs-date"><?= (substr($row['date_publication'],0,10)); ?></p>
                         <p class="blogs-title"><?= ($row['title']); ?></p>
                         <div class="moreDetails">
                             <a class="moreDetailsText" href="blogsDetails.php">En savoir plus</a>
