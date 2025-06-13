@@ -103,15 +103,10 @@ body {
     border-radius: 8px;
 }
 .blogs-title {
-    font-size: 35px;
+    font-size: 32px;
     font-weight: bold;
-    margin: 5px 0;
-}
-.blogs-description{
-    font-size: 25px;
 }
 .blogs-date{
-    margin-top: 5px;
     font-size: 20px;
 }
 
@@ -146,7 +141,7 @@ p{
     font-size: 20px;
 }
 .moreDetails{
-    margin: 20px 10px 10px 10px;
+    margin: 10px;
     display: flex;
     justify-content: center;
 }
