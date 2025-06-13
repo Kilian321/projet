@@ -77,37 +77,43 @@ if ($mot_de_passe_2 === $confirmation){
     <div class="border center ">
         <div class="margin">
             <form method="post">
-                <div class="margin-bottom">
+                <div class="margin-bottom ">
                     <h4> Email : </h4>  <br>
-                    <input class="input_size" type="email" name="email" required ><br>
+                    <input class="input_size-2 border-input" type="email" name="email" required ><br>
                 </div>
                 <div class="margin-bottom">
                     <h4> Mot de passe :</h4>
-                    <div class="">
+                    <div class="border-input">
                         <input  id="passwordInput" class="input_size passwordInput" type="password" name="password" required>
-                        <img class="img-2" src="../PICTURE/view.png" id="passwordView" alt="passwordView">
+                        <img class="img-2 mr" src="../PICTURE/view.png" id="passwordView" alt="passwordView ">
                     </div>
                 </div>
                 <div class="">
                     <h4>Confirmation du mot de passe : </h4><br>
-                    <div class="">
+                    <div class="border-input">
                         <input class="input_size passwordInput2" type="password" name="mot_de_passe_confirmation" required>
-                        <img class="img-3" src="../PICTURE/view.png" id="passwordHide" alt="passwordHide">
+                        <img class="img-3 mr" src="../PICTURE/view.png" id="passwordHide" alt="passwordHide">
                     </div>
                 </div>
-                <!-- Bouton génération mot de passe -->
-                <div class="center margin_top-3">
-                    <button id="genPassBtn" type="button" class="center button_size-2 police" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Génération de mot de passe
-                    </button>
+                <div class="margin-left">
+                    <!-- Bouton génération mot de passe -->
+                    <div class="center margin_top-3">
+                        <button id="genPassBtn" type="button" class="center button_size-2 police" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Génération de mot de passe
+                        </button>
+                    </div>
+
+                    <button class="button_size police" type="submit">I n s c r i p t i o n</button>
                 </div>
 
-                <button class="button_size police" type="submit">I n s c r i p t i o n</button>
             </form>
             <div class="line margin-bottom"></div>
-            <div class="center">
-                <h4>Tu as déjà un compte ? <a href="connexion.php">Connexion</a> </h4>
+            <div class="margin-left">
+                <div class="center">
+                    <h4>Tu as déjà un compte ? <a href="connexion.php">Connexion</a> </h4>
+                </div>
             </div>
+
         </div>
     </div>
 </div>

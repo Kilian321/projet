@@ -47,20 +47,20 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
 ?>
 <!--Le formulaire -->
 <div class="center margin_top margin">
-    <div class="border center ">
+    <div class="border-2 center ">
         <div class="margin">
             <form method="post">
                 <div class="margin-bottom">
                     <h4>Email :</h4><br>
-                    <input  class="input_size"  type="email" name="email" required ><br>
+                    <input  class="input_size border-input"  type="email" name="email" required ><br>
                 </div>
                 <div>
                     <h4>Mot de passe :</h4> <br>
-                    <input class="input_size" type="password" name="password" required><br>
+                    <input class="input_size border-input" type="password" name="password" required><br>
                 </div>
                 <button class="button_size police" type="submit">C o n n e x i o n</button>
             </form>
-            <div class="line margin-bottom"></div>
+            <div class="line-2 margin-bottom"></div>
             <div class="center">
                 <h4>Tu n'as pas de  compte ? <a href="registration.php">Inscription</a></h4>
             </div>
