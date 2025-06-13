@@ -5,12 +5,16 @@ require_once "navbar.php";
 global $pdo;
 
 ?>
+
 <?php
+/*Affichage erreurs php*/
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ?>
+
 <?php
+/*Le php de création de blog*/
 if(!empty($_POST['title-blog']) && !empty($_POST['description-blog'])) {
     $titleBlog = htmlspecialchars($_POST['title-blog']);
     $descriptionBlog = htmlspecialchars($_POST['description-blog']);
@@ -26,6 +30,27 @@ if(!empty($_POST['title-blog']) && !empty($_POST['description-blog'])) {
     echo '<div class="  center-form mt-form"> 
                           <div class="center-form box_green text_color-green animation">
                              Vous avez ajouté un blog avec succès !
+                          </div> 
+                      </div> ';
+}
+?>
+<?php
+/*Le php de création de chantier*/
+if(!empty($_POST['title-chantier']) && !empty($_POST['description-chantier'])) {
+    $titleChantier = htmlspecialchars($_POST['title-chantier']);
+    $descriptionChantier = htmlspecialchars($_POST['description-chantier']);
+    if (isset($_FILES["image-chantier"]) && $_FILES["image-chantier"]["error"] == 0) {
+        // Déplacez le fichier vers le répertoire cible.
+        move_uploaded_file($_FILES["image-chantier"]["tmp_name"], "../PICTURE/img-chantier/" . $_FILES["image-chantier"]["name"]);
+    }
+
+    $sql = "INSERT INTO constructionsites (title,description,picture) VALUES (:title,:description,:picture)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(':title' => $titleChantier, ':description' => $descriptionChantier, ':picture' => !empty($_FILES["image-chantier"]["name"]) ? $_FILES["image-chantier"]["name"] : ''));
+    $pdo = null;
+    echo '<div class="  center-form mt-form"> 
+                          <div class="center-form box_green text_color-green animation">
+                             Vous avez ajouté un chantier avec succès !
                           </div> 
                       </div> ';
 }
@@ -96,7 +121,7 @@ if(!empty($_POST['title-blog']) && !empty($_POST['description-blog'])) {
                 Crée un Chantier :
             </div>
             <!--Formulaire-->
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 <!--Bouton titre-->
                 <div class="center-form mt-form">
                     <input  class="btn-title text-placeholder" type="text" name="title-chantier" placeholder="Titre">

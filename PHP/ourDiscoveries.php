@@ -4,6 +4,8 @@ require_once "navbar.php";
 require_once '../DATA-BASE/database.php';
 global $pdo;
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -58,7 +60,7 @@ global $pdo;
 
                     ?>
                     <div class="constructionSites-item">
-                        <img src="<?= ($row['picture']);  ?>" alt="Film 1">
+                        <img src="../PICTURE/img-chantier/<?= $row['picture']?>" alt="<?= $row['title']?>">
                         <p class="constructionSites-date"><?= (substr($row['date_publication'],0,10)); ?></p>
                         <p class="constructionSites-title"><?= ($row['title']); ?></p>
                         <p class="constructionSites-description"><?= ($row['description']); ?></p>
