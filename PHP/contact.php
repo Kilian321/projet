@@ -4,13 +4,49 @@ require_once '../DATA-BASE/database.php';
 require_once "navbar.php";
 
 ?>
+<?php global $pdo;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["contactBtn"])) {
+        $nom = $_POST["last_name"];
+        $prenom = $_POST["first_name"];
+        $email = $_POST["email"];
+        $menu = $_POST["menu"];
+        $menuStatus = 1;
+        switch ($menu) {
+            case "Demande d'informations": $menuStatus = 0; break;
+            case "Demande de rendez-vous": $menuStatus = 1; break;
+            case "Autre": $menuStatus = 2; break;
+        }
+        $message = $_POST["message"];
 
+        $sql = "INSERT INTO forms (last_name, first_name, email, menu, message) VALUES (:last_name, :first_name, :email, :menu, :message)";
+        $stmt = $pdo->prepare($sql);
+
+        // Associer les valeurs et exécuter la requête
+        $stmt->execute([
+            ':last_name' => $nom,
+            ':first_name' => $prenom,
+            ':email' => $email,
+            ':menu' => $menuStatus,
+            ':message' => $message
+        ]);
+        echo '<div class="  center-form mt-form"> 
+                          <div class="center-form box_green text_color-green animation">
+                             Votre demande a bien été enregistrée.
+                          </div> 
+                      </div> ';
+    }
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <title>Archéo-IT Contact</title>
     <meta charset="UTF-8">
     <link href="../CSS/contact.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/create_page.css">
     <link rel="icon" href="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
 </head>
 <body>
@@ -27,38 +63,7 @@ require_once "navbar.php";
     </div>
     <div class="informationContact">
         <h2 class="contactUS">Contactez-nous :</h2>
-        <?php global $pdo;
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            if (isset($_POST["contactBtn"])) {
-                $nom = $_POST["last_name"];
-                $prenom = $_POST["first_name"];
-                $email = $_POST["email"];
-                $menu = $_POST["menu"];
-                $menuStatus = 1;
-                switch ($menu) {
-                    case "Demande d'informations": $menuStatus = 0; break;
-                    case "Demande de rendez-vous": $menuStatus = 1; break;
-                    case "Autre": $menuStatus = 2; break;
-                }
-                $message = $_POST["message"];
 
-                $sql = "INSERT INTO forms (last_name, first_name, email, menu, message) VALUES (:last_name, :first_name, :email, :menu, :message)";
-                $stmt = $pdo->prepare($sql);
-
-                // Associer les valeurs et exécuter la requête
-                $stmt->execute([
-                    ':last_name' => $nom,
-                    ':first_name' => $prenom,
-                    ':email' => $email,
-                    ':menu' => $menuStatus,
-                    ':message' => $message
-                ]);
-                echo "Votre demande a bien été enregistrée.";
-            }
-        }
-
-
-        ?>
         <form action="contact.php" method="post">
             <label for="nom">Nom :</label>
             <input type="text" id="" name="last_name" required>

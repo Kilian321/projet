@@ -98,15 +98,15 @@ if(!empty($_POST['title-chantier']) && !empty($_POST['description-chantier'])) {
             <form method="post" enctype="multipart/form-data">
                 <!--Bouton titre-->
                 <div class="center-form mt-form">
-                    <input  class="btn-title text-placeholder" type="text" name="title-blog" placeholder="Titre">
+                    <input  required class="btn-title text-placeholder" type="text" name="title-blog" placeholder="Titre">
                 </div>
                 <!--Bouton description-->
                 <div class="center-form mt-form">
-                    <textarea  class="btn-description text-placeholder" type="text" name="description-blog" placeholder="Description"></textarea>
+                    <textarea required class="btn-description text-placeholder" type="text" name="description-blog" placeholder="Description"></textarea>
                 </div>
                 <!--Bouton image-->
                 <div class="center-form mt-form">
-                    <input  class="btn-image text-placeholder" type="file" name="image-blog">
+                    <input required class="btn-image text-placeholder" type="file" name="image-blog">
                 </div>
                 <!--Bouton Valider-->
                 <div class="center-form mt-form">
@@ -124,15 +124,15 @@ if(!empty($_POST['title-chantier']) && !empty($_POST['description-chantier'])) {
             <form method="post" enctype="multipart/form-data">
                 <!--Bouton titre-->
                 <div class="center-form mt-form">
-                    <input  class="btn-title text-placeholder" type="text" name="title-chantier" placeholder="Titre">
+                    <input  required class="btn-title text-placeholder" type="text" name="title-chantier" placeholder="Titre">
                 </div>
                 <!--Bouton description-->
                 <div class="center-form mt-form">
-                    <textarea  class="btn-description text-placeholder" type="text" name="description-chantier" placeholder="Description"></textarea>
+                    <textarea required class="btn-description text-placeholder" type="text" name="description-chantier" placeholder="Description"></textarea>
                 </div>
                 <!--Bouton image-->
                 <div class="center-form mt-form">
-                    <input  class="btn-image text-placeholder" type="file" name="image-chantier">
+                    <input required class="btn-image text-placeholder" type="file" name="image-chantier">
                 </div>
                 <!--Bouton Valider-->
                 <div class="center-form mt-form">

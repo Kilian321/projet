@@ -1,0 +1,20 @@
+.title-blog{
+    color:#f2e5d2;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.center-blog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-blog{
+    background-color: #724d3d;
+}
+.bg-blog-2{
+    background-color: #f2e5d2;
+}
+.mt-blog{
+    margin-top: 40px;
+}
