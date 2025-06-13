@@ -64,7 +64,6 @@ body {
 
 /* content of blogs */
 .constructionSites-container {
-    width: 80%;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -73,7 +72,9 @@ body {
 /* blogs */
 .constructionSites-bloc {
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -95,8 +96,8 @@ body {
 
 /* picture */
 .constructionSites-item img {
-    width: 100%;
-    height: auto;
+    width: 390px;
+    height: 260px;
     border-radius: 8px;
 }
 
@@ -124,6 +125,11 @@ body {
         justify-content: center;
         align-items: center;
     }
+    .constructionSites-item img {
+        width: 470px;
+        height: 290px;
+        border-radius: 8px;
+        }
     .card{
         min-width: 580px;
     }
@@ -142,10 +148,6 @@ body {
     }
     .constructionSites-date{
         font-size: 23px;
-    }
-    .constructionSites-item{
-        min-width: 480px;
-        max-width: 350px;
     }
 }
 

@@ -98,8 +98,8 @@ body {
 
 /* picture */
 .blogs-item img {
-    width: 100%;
-    height: auto;
+    width: 390px;
+    height: 260px;
     border-radius: 8px;
 }
 .blogs-title {
@@ -192,5 +192,10 @@ p{
     .blogs-item{
         min-width: 480px;
         max-width: 350px;
+    }
+    .blogs-item img {
+        width: 470px;
+        height: 290px;
+        border-radius: 8px;
     }
 }
