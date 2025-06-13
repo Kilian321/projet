@@ -68,9 +68,16 @@ global $pdo;
                         <img src="../PICTURE/img-blog/<?= $row['picture']?>" alt="<?= $row['title']?>">
                         <p class="blogs-date"><?= (substr($row['date_publication'],0,10)); ?></p>
                         <p class="blogs-title"><?= ($row['title']); ?></p>
+                        <!--Bouton vers la page de détail-->
                         <div class="moreDetails">
-                            <a class="moreDetailsText" href="blogsDetails.php">En savoir plus</a>
+                            <form action="blogsDetails.php" method="get">
+                                <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                <button type="submit" class="moreDetailsText">
+                                    En savoir plus
+                                </button>
+                            </form>
                         </div>
+
                     </div>
 
                 <?php
