@@ -145,7 +145,7 @@ if ($mot_de_passe_2 === $confirmation){
                     </div>
                     <div class="gap display-flex">
                         <h5> Taille du mot de passe : </h5>
-                        <input class="password-size input_size_password" type="number"  value="8" min="8" max="24" step="1" name="" required>
+                        <input class="password-size input_size_password" type="number" id="numberStart" value="8" min="8" max="24" step="1" name="" required>
                     </div>
                     <button id="passwordSettingsBtn" class="button_size police" data-bs-dismiss="modal" type="">Envoyer</button>
                 </div>
@@ -158,6 +158,10 @@ if ($mot_de_passe_2 === $confirmation){
 <script>
     document.getElementById("connexion")?.addEventListener('click',function (){
         window.location='navbar.php'
+    })
+    const numberstart = document.getElementById("numberStart");
+    numberstart.addEventListener('keydown',function (event){
+        event.preventDefault();
     })
 </script>
 <script src="../JS/fichier.js"></script>
