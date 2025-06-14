@@ -35,6 +35,11 @@ if (isset($_GET['id'])) {
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['id' => $id]);
     $blog = $stmt->fetch();
+    /*Changer le format de date*/
+    $date = new DateTime($blog['date_publication']);
+    $time = new DateTime($blog['date_publication']);
+    $date = $date->format('d:m:Y');
+    $time = $time->format('H');
     if ($blog) {
         // Titre du blog
         echo "
@@ -45,7 +50,21 @@ if (isset($_GET['id'])) {
         // Image du blog
         echo "
     <div class='center-blog bg-blog-2 mt-blog'>
-        <img src='../PICTURE/img-blog/{$blog['picture']}' alt='{$blog['title']}' />
+        <img class='img-details' src='../PICTURE/img-blog/{$blog['picture']}' alt='{$blog['title']}'/>
+    </div>";
+
+    // Date de publication
+        echo "
+    <div class='center-blog bg-blog-2 mt-blog column-blog '>
+        <div class='mb-blog-2'> Publié le {$date} à {$time}h</div>
+        <div class='line-blog'></div>
+    </div>";
+
+        // Description du blog
+        echo "
+    <div class='center-blog bg-blog-2 mt-blog mb-blog column-blog'>
+        <div class='size-description mb-blog-2'>{$blog['description']}</div>
+        <div class='line-blog'></div>
     </div>";
     }
 }

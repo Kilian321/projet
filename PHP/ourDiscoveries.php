@@ -57,11 +57,12 @@ global $pdo;
                 $sql = "SELECT * FROM constructionsites"; // votre requete sql
                 $result = $pdo->query($sql);
                 foreach($result as $row):
-
+                    $date = new DateTime($row['date_publication']);
+                    $date = $date->format('d/m/Y');
                     ?>
                     <div class="constructionSites-item">
                         <img src="../PICTURE/img-chantier/<?= $row['picture']?>" alt="<?= $row['title']?>">
-                        <p class="constructionSites-date"><?= (substr($row['date_publication'],0,10)); ?></p>
+                        <p class="constructionSites-date">Publié le <?= $date ?></p>
                         <p class="constructionSites-title"><?= ($row['title']); ?></p>
                         <p class="constructionSites-description"><?= ($row['description']); ?></p>
                     </div>

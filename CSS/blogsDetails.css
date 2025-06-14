@@ -18,3 +18,31 @@
 .mt-blog{
     margin-top: 40px;
 }
+.mb-blog{
+    margin-bottom: 50px;
+}
+.mb-blog-2{
+    margin-bottom: 40px;
+}
+
+.img-details{
+    border: 3px solid #724d3d;
+    border-radius: 10px;
+}
+
+.size-description{
+    width: 600px;
+    text-align: justify;
+    color: #724d3d;
+    font-weight: 500;
+}
+
+.line-blog{
+    height: 1px;
+    width: 600px;
+    background-color: #724d3d;
+}
+.column-blog{
+    display: flex;
+    flex-direction: column;
+}

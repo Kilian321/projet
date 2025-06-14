@@ -62,11 +62,13 @@ global $pdo;
                 $sql = "SELECT * FROM blogs"; // votre requete sql
                 $result = $pdo->query($sql);
                 foreach($result as $row):
+                    $date = new DateTime($row['date_publication']);
+                    $date = $date->format('d/m/Y');
 
                     ?>
                     <div class="blogs-item">
                         <img src="../PICTURE/img-blog/<?= $row['picture']?>" alt="<?= $row['title']?>">
-                        <p class="blogs-date"><?= (substr($row['date_publication'],0,10)); ?></p>
+                        <p class="blogs-date">Publié le <?=$date?></p>
                         <p class="blogs-title"><?= ($row['title']); ?></p>
                         <!--Bouton vers la page de détail-->
                         <div class="moreDetails">
