@@ -145,7 +145,7 @@ if ($mot_de_passe_2 === $confirmation){
                     </div>
                     <div class="gap display-flex">
                         <h5> Taille du mot de passe : </h5>
-                        <input class="password-size input_size_password" type="number" name="" required>
+                        <input class="password-size input_size_password" type="number"  value="8" min="8" max="24" step="1" name="" required>
                     </div>
                     <button id="passwordSettingsBtn" class="button_size police" data-bs-dismiss="modal" type="">Envoyer</button>
                 </div>

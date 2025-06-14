@@ -66,6 +66,13 @@ if (isset($_GET['id'])) {
         <div class='size-description mb-blog-2'>{$blog['description']}</div>
         <div class='line-blog'></div>
     </div>";
+
+        // Messsage
+        echo "
+    <div class='center-blog bg-blog-2 mt-blog column-blog '>
+        <div class='mb-blog-2 size-date'>Nos lecteurs ont lu ensuite</div>
+    </div>";
+
     }
 }
 ?>

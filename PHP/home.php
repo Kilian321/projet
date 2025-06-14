@@ -16,9 +16,6 @@ global $pdo;
     <link href="../CSS/ourDiscoveries.css" rel="stylesheet">
 </head>
 
-<?php if(!empty($_SESSION['user'])): ?>
-<h2>Bonjour <?= $_SESSION['user']['email']; ?></h2>
-<?php endif; ?>
 <body>
 <header>
     <div class="slider-container">
