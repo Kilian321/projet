@@ -15,8 +15,22 @@
 .bg-blog-2{
     background-color: #f2e5d2;
 }
+.bg-blog-details{
+    width: 280px;
+    height: 350px;
+    background-color: white;
+    border-radius: 5px;
+}
+.bg-more-details{
+    background-color: #724d3d;
+    border: none;
+    border-radius: 5px;
+}
 .mt-blog{
     margin-top: 40px;
+}
+.mt-card{
+    margin-top: 5px;
 }
 .mb-blog{
     margin-bottom: 50px;
@@ -28,6 +42,29 @@
 .img-details{
     border: 3px solid #724d3d;
     border-radius: 10px;
+    width: 600px;
+    height: 412px;
+}
+.img-details-2{
+    width: 270px;
+    height: 200px;
+    border-radius: 10px;
+}
+.bloc-publiation{
+    height: 30px;
+    width: 100%;
+    color: #555;
+}
+.bloc-title{
+    height: 30px;
+    width: 100%;
+    color: #555;
+    font-size: 20px;
+}
+.bloc-more-details{
+    height: 30px;
+    width: 100%;
+    font-size: 20px;
 }
 
 .size-description{
@@ -35,6 +72,10 @@
     text-align: justify;
     color: #724d3d;
     font-weight: 500;
+}
+.size-more-description{
+    color: white;
+    font-size: 15px;
 }
 
 .line-blog{
@@ -45,4 +86,101 @@
 .column-blog{
     display: flex;
     flex-direction: column;
+}
+
+
+.in-line-details{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.size-date{
+
+}
+
+@media (max-width: 991px){
+    .title-blog{
+        color:#f2e5d2;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .img-details{
+        border: 3px solid #724d3d;
+        border-radius: 10px;
+        transform: scale(1.4);
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .img-details-2{
+        width: 580px;
+        height: 430px;
+        border-radius: 10px;
+    }
+    .bg-blog-details{
+        width: 600px;
+        height: 750px;
+        background-color: white;
+        border-radius: 5px;
+
+    }
+    .bg-more-details{
+        background-color: #724d3d;
+        border: none;
+        border-radius: 5px;
+    }
+    .bloc-publiation{
+        height: 60px;
+        width: 100%;
+        color: #555;
+        font-size: 40px;
+    }
+    .size-date{
+        font-size: 40px;
+    }
+    .bloc-title{
+        height: 60px;
+        width: 100%;
+        color: #555;
+        font-size: 50px;
+    }
+    .bloc-more-details{
+        height: 60px;
+        width: 300px;
+        font-size: 30px;
+    }
+    .mt-blog{
+        margin-top: 40px;
+    }
+    .mt-card{
+        margin-top: 20px;
+    }
+    .mb-blog{
+        margin-bottom: 50px;
+    }
+    .mb-blog-2{
+        margin-bottom: 40px;
+    }
+    .size-description{
+        width: 840px;
+        text-align: justify;
+        color: #724d3d;
+        font-weight: 500;
+        font-size: 40px;
+    }
+    .size-more-description{
+        color: white;
+        font-size: 40px;
+    }
+
+    .line-blog{
+        height: 1px;
+        width: 840px;
+        background-color: #724d3d;
+    }
+    .in-line-details{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
 }
