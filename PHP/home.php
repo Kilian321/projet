@@ -58,14 +58,17 @@ global $pdo;
     <section class="blogs-carousel">
         <div class="blogs-container">
             <div class="blogs-bloc">
+                <!--Si on est connecté-->
+                <?php if(!empty($_SESSION['user'])): ?>
                 <?php
-                $sql = "SELECT * FROM blogs"; // votre requete sql
+                $sql = "SELECT * FROM blogs ORDER BY date_publication DESC LIMIT 8"; // votre requete sql
                 $result = $pdo->query($sql);
                 foreach($result as $row):
                     $date = new DateTime($row['date_publication']);
                     $date = $date->format('d/m/Y');
 
                     ?>
+
                     <div class="blogs-item">
                         <img src="../PICTURE/img-blog/<?= $row['picture']?>" alt="<?= $row['title']?>">
                         <p class="blogs-date">Publié le <?=$date?></p>
@@ -79,11 +82,39 @@ global $pdo;
                                 </button>
                             </form>
                         </div>
-
                     </div>
-
                 <?php
                 endforeach;
+                endif;
+                ?>
+                <!--Si on n'est pas connecté-->
+                <?php if(empty($_SESSION['user'])): ?>
+                    <?php
+                    $sql = "SELECT * FROM blogs ORDER BY date_publication DESC LIMIT 3"; // votre requete sql
+                    $result = $pdo->query($sql);
+                    foreach($result as $row):
+                        $date = new DateTime($row['date_publication']);
+                        $date = $date->format('d/m/Y');
+
+                        ?>
+
+                        <div class="blogs-item">
+                            <img src="../PICTURE/img-blog/<?= $row['picture']?>" alt="<?= $row['title']?>">
+                            <p class="blogs-date">Publié le <?=$date?></p>
+                            <p class="blogs-title"><?= ($row['title']); ?></p>
+                            <!--Bouton vers la page de détail-->
+                            <div class="moreDetails">
+                                <form action="blogsDetails.php" method="get">
+                                    <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                    <button type="submit" class="moreDetailsText">
+                                        En savoir plus
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    <?php
+                    endforeach;
+                endif;
                 ?>
 
             </div>

@@ -70,6 +70,8 @@ if (isset($_GET['id'])) {
 }
 ?>
 <div class="in-line-details">
+    <!--Si on est connecté-->
+    <?php if(!empty($_SESSION['user'])): ?>
     <?php
     $sql = "SELECT DISTINCT * FROM blogs ORDER BY RAND() LIMIT 2"; // votre requete sql
     $result = $pdo->query($sql);
@@ -108,6 +110,49 @@ if (isset($_GET['id'])) {
         </div>
     <?php
     endforeach;
+    endif;
+    ?>
+    <!--Si on n'est pas connecté-->
+    <?php if(empty($_SESSION['user'])): ?>
+        <?php
+        $sql = "SELECT DISTINCT * FROM blogs ORDER BY  date_publication DESC LIMIT 2"; // votre requete sql
+        $result = $pdo->query($sql);
+        foreach($result as $row):
+            $date = new DateTime($row['date_publication']);
+            $date = $date->format('d/m/Y');
+
+            ?>
+            <div class="center-blog">
+                <!--fond de la carte blog-->
+                <div class="bg-blog-details">
+                    <!--image-->
+                    <div class="center-blog mt-card">
+                        <img class="img-details-2" src="../PICTURE/img-blog/<?= $row['picture']?>" alt="<?= $row['title']?>">
+                    </div>
+                    <!--Date de publication-->
+                    <div class="center-blog mt-card">
+                        <p class="bloc-publiation center-blog">Publié le <?=$date?></p>
+                    </div>
+                    <!--Titre-->
+                    <div class="center-blog mt-card">
+                        <p class="bloc-title center-blog"><?= ($row['title']); ?></p>
+                    </div>
+                    <!--Bouton vers la page de détail-->
+                    <div class="center-blog">
+                        <form action="blogsDetails.php" method="get">
+                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                            <button type="submit" class="bg-more-details bloc-more-details">
+                                <div class="size-more-description">
+                                    En savoir plus
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <?php
+        endforeach;
+    endif;
     ?>
 </div>
 <?php require_once "footerPolicy.php"; ?>
