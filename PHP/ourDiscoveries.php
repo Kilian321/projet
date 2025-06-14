@@ -65,7 +65,7 @@ global $pdo;
                         <img src="../PICTURE/img-chantier/<?= $row['picture']?>" alt="<?= $row['title']?>">
                         <p class="constructionSites-date">Publié le <?= $date ?></p>
                         <p class="constructionSites-title"><?= ($row['title']); ?></p>
-                        <p class="constructionSites-description"><?= ($row['description']); ?></p>
+                        <p class="constructionSites-description"><?= substr(($row['description']),0, 20); ?></p>
                     </div>
 
                 <?php
