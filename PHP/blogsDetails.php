@@ -38,7 +38,7 @@ if (isset($_GET['id'])) {
     /*Changer le format de date*/
     $date = new DateTime($blog['date_publication']);
     $time = new DateTime($blog['date_publication']);
-    $date = $date->format('d:m:Y');
+    $date = $date->format('d/m/Y');
     $time = $time->format('H');
     if ($blog) {
         // Titre du blog
