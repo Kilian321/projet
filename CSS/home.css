@@ -159,6 +159,22 @@ p{
     background-color: rgba(27, 16, 6, 0.8);
     color: white;
 }
+.buttonDelete{
+    height: 45px;
+    width: 100px;
+    margin-left: 100px;
+    background-color: #ae5759;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor:pointer;
+    color : white;
+}
+.buttonForAdmin{
+    display: flex;
+    flex-direction: row;
+}
 
 @media (max-width: 991px) {
     .blogs-container {
@@ -194,8 +210,8 @@ p{
         max-width: 350px;
     }
     .blogs-item img {
-        width: 390px;
-        height: 290px;
+        width: 470px;
+        height: 260px;
         border-radius: 8px;
     }
 }

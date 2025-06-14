@@ -65,6 +65,10 @@ global $pdo;
                         <p class="constructionSites-date">Publié le <?= $date ?></p>
                         <p class="constructionSites-title"><?= ($row['title']); ?></p>
                         <p class="constructionSites-description"><?= ($row['description']); ?></p>
+                        <button type="submit" class="buttonDelete">
+                            Supprimer
+                        </button>
+
                     </div>
 
                 <?php

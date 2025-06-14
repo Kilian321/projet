@@ -117,6 +117,17 @@ body {
 .constructionSites-item p {
     color: #555;
 }
+.buttonDelete{
+    height: 45px;
+    width: 100px;
+    background-color: #ae5759;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor:pointer;
+    color : white;
+}
 
 @media (max-width: 991px) {
     .constructionSites-container {

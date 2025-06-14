@@ -103,9 +103,14 @@ global $pdo;
                             <div class="moreDetails">
                                 <form action="blogsDetails.php" method="get">
                                     <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                                    <div class="buttonForAdmin">
                                     <button type="submit" class="moreDetailsText">
                                         En savoir plus
                                     </button>
+                                        <button type="submit" class="buttonDelete">
+                                            Supprimer
+                                        </button>
+                                    </div>
                                 </form>
                             </div>
                         </div>
