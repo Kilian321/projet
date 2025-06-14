@@ -21,6 +21,7 @@ $stmt = $pdo->query($sql);
         <h2>Messagerie :</h2>
         <div class="chat-box">
             <?php while ($row = $stmt->fetch()) {
+                /*Changer le format dela date*/
                 $date = new DateTime($row['created_at']);
                 $date = $date->format('d/m/Y H:i');
                 ?>

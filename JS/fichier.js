@@ -11,9 +11,9 @@ passwordSettingsBtn.addEventListener("click", ()=>{
 function getPasswordDatas(){
 
     const passwordSize = document.querySelector(".password-size");
-    const passModeSel = document.querySelector(".passModeSel");
+    const passModeList = document.querySelector(".passModeList");
 
-    switch (passModeSel.selectedOptions[0].id){
+    switch (passModeList.selectedOptions[0].id){
 
         case "Alpha" :
             mode = 1

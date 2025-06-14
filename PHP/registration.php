@@ -102,10 +102,8 @@ if ($mot_de_passe_2 === $confirmation){
                             Génération de mot de passe
                         </button>
                     </div>
-
                     <button class="button_size police" type="submit">I n s c r i p t i o n</button>
                 </div>
-
             </form>
             <div class="line margin-bottom"></div>
             <div class="margin-left">
@@ -117,12 +115,7 @@ if ($mot_de_passe_2 === $confirmation){
         </div>
     </div>
 </div>
-
-
-
-
-
-<!-- Modal -->
+<!--Rentrer dans le générateur de mot de passe -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -135,7 +128,7 @@ if ($mot_de_passe_2 === $confirmation){
                 <div class="margin-bottom">
                     <div class="center gap margin-bottom">
                         <h5> Type de mot de passse : </h5>
-                        <select class="passModeSel input_size_password">
+                        <select class="passModeList input_size_password">
                             <div class="center">
                                 <option class="passMode" id="Alpha">Alphabétique</option>
                                 <option class="passMode" id="AlphaNum">Alphanumérique</option>

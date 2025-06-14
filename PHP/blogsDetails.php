@@ -4,12 +4,7 @@ require_once '../DATA-BASE/database.php';
 global $pdo;
 require_once "navbar.php";
 ?>
-<?php
-/*Affichage erreurs php*/
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,9 +16,6 @@ error_reporting(E_ALL);
 </head>
 
 <body class="bg-blog-2">
-
-
-<!--Titre du quiz-->
 <?php
 
 /*Récupération de l'id*/
@@ -53,7 +45,7 @@ if (isset($_GET['id'])) {
         <img class='img-details' src='../PICTURE/img-blog/{$blog['picture']}' alt='{$blog['title']}'/>
     </div>";
 
-    // Date de publication
+        // Date de publication
         echo "
     <div class='center-blog bg-blog-2 mt-blog column-blog '>
         <div class='mb-blog-2 size-date'> Publié le {$date} à {$time}h</div>
@@ -80,7 +72,7 @@ if (isset($_GET['id'])) {
     <!--Si on est connecté-->
     <?php if(!empty($_SESSION['user'])): ?>
     <?php
-    $sql = "SELECT DISTINCT * FROM blogs ORDER BY RAND() LIMIT 2"; // votre requete sql
+    $sql = "SELECT DISTINCT * FROM blogs ORDER BY RAND() LIMIT 2";
     $result = $pdo->query($sql);
     foreach($result as $row):
         $date = new DateTime($row['date_publication']);
@@ -122,13 +114,13 @@ if (isset($_GET['id'])) {
     <!--Si on n'est pas connecté-->
     <?php if(empty($_SESSION['user'])): ?>
         <?php
-        $sql = "SELECT DISTINCT * FROM blogs ORDER BY  date_publication DESC LIMIT 2"; // votre requete sql
+        $sql = "SELECT DISTINCT * FROM blogs ORDER BY  date_publication DESC LIMIT 2";
         $result = $pdo->query($sql);
         foreach($result as $row):
             $date = new DateTime($row['date_publication']);
             $date = $date->format('d/m/Y');
 
-            ?>
+        ?>
             <div class="center-blog">
                 <!--fond de la carte blog-->
                 <div class="bg-blog-details">
@@ -164,5 +156,4 @@ if (isset($_GET['id'])) {
 </div>
 <?php require_once "footerPolicy.php"; ?>
 </body>
-
 </html>

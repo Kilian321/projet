@@ -57,6 +57,7 @@ global $pdo;
                 $sql = "SELECT * FROM constructionsites"; // votre requete sql
                 $result = $pdo->query($sql);
                 foreach($result as $row):
+                    /*Change le format de date*/
                     $date = new DateTime($row['date_publication']);
                     $date = $date->format('d/m/Y');
                     ?>
@@ -65,10 +66,6 @@ global $pdo;
                         <p class="constructionSites-date">Publié le <?= $date ?></p>
                         <p class="constructionSites-title"><?= ($row['title']); ?></p>
                         <p class="constructionSites-description"><?= ($row['description']); ?></p>
-                        <button type="submit" class="buttonDelete">
-                            Supprimer
-                        </button>
-
                     </div>
 
                 <?php

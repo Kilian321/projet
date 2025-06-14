@@ -7,13 +7,6 @@ global $pdo;
 ?>
 
 <?php
-/*Affichage erreurs php*/
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
-
-<?php
 /*Le php de création de blog*/
 if(!empty($_POST['title-blog']) && !empty($_POST['description-blog'])) {
     $titleBlog = htmlspecialchars($_POST['title-blog']);
@@ -61,6 +54,7 @@ if(!empty($_POST['title-chantier']) && !empty($_POST['description-chantier'])) {
 <head>
     <title>Archéo-IT Création de page</title>
     <meta charset="UTF-8">
+    <!--Five icon-->
     <link rel="icon" href="../PICTURE/Archeo-IT_Logo-removebg-preview.png">
     <!--Style-->
     <link rel="stylesheet" href="../CSS/create_page.css">
@@ -142,23 +136,7 @@ if(!empty($_POST['title-chantier']) && !empty($_POST['description-chantier'])) {
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--JS-->
 <script src="../JS/create.js"></script>
 </body>
 </html>

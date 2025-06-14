@@ -107,9 +107,7 @@ global $pdo;
                                     <button type="submit" class="moreDetailsText">
                                         En savoir plus
                                     </button>
-                                        <button type="submit" class="buttonDelete">
-                                            Supprimer
-                                        </button>
+
                                     </div>
                                 </form>
                             </div>
